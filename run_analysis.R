@@ -27,8 +27,8 @@ names(activityData) <- c("activity")
 featuresDataNames <- read.table(file.path(quizeDir, "features.txt"), head = FALSE)
 names(featuresData) <- featuresDataNames$V2
 
-combinedData <- cbind(dataSubject, dataActivity)
-Data <- cbind(dataFeatures, combinedData)
+combinedData <- cbind(subjectData, activityData)
+Data <- cbind(featuresData, combinedData)
 
 featuresSubdataNames <- featuresDataNames$V2[grep("mean\\(\\)|std\\(\\)", featuresDataNames$V2)]
 
